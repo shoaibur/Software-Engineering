@@ -103,3 +103,11 @@ print(dfs(adj, 0))
 .——————>3——————>5———————.
    4        3       5
 ```
+
+
+### Topological sorting
+* Graph must be Directed and Acyclic Graph (DAG)
+* Topological sorting is a linear order such that u comes before v for each [u, v]
+  * For each node, run a DFS in which
+    * Maintain a visited set, and add the current node to the visited set.
+    * For each neighbor of the current node, call DFS recursively.
