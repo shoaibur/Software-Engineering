@@ -78,3 +78,28 @@ print(dfs(adj, 0))
     * Continue with the next minimum cost edge, but skip if that forms any loop
     * Stop when the number of edges is equal to V - 1
     * Time complexity: Find the minimum from E edge costs for (V-1) times, so O(E.(V-1)) = O(n^2), which can be improved to O(n log n) by using min heap.
+
+### Shortest path algorithms
+* Dijkstra algorithm:
+  * Step 1: Assign gain 0 to source node and gain infinity to all other nodes
+  * Step 2: Start from the source node (visiting node), i.e., node with the minimum gain
+  * Step 3: Relax the nodes connected to the visiting node.
+	    * Relaxation: from visiting node u to its connected node v
+     ```
+	    if gain[u] + cost(u,v) < gain[v]:
+		       gain[v] = gain[u] + cost(u, v)
+     ```
+  * Step 4: Select the node with minimum gain from remaining nodes, i.e., from the nodes that have not been considered as visiting node yet, and repeat step 3. Continue until each node is considered as the visiting node.
+  * Time complexity: We visit all vertices and at each visiting node we relax all its connected node, so O(V.V) = O(n^2)
+  * Example:
+```
+    2       7       1
+.——————>2——————>4———————.
+|       |       ^       |
+|       |       |       v
+1       |1      |2      6
+|       |       |       ^
+|       v       |       |
+.——————>3——————>5———————.
+   4        3       5
+```
