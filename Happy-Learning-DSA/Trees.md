@@ -15,13 +15,13 @@
 * Binary Search Tree (BST)
   * For all node, left < root < right
 * Tree node
-```
-class TreeNode:
-    def __init__(self, val=None):
-        self.val = val
-        self.left = None
-        self.right = None
-```
+  ```
+  class TreeNode:
+      def __init__(self, val=None):
+          self.val = val
+          self.left = None
+          self.right = None
+  ```
 * Basic operations
   * Insert (into BST)
     ```
@@ -35,6 +35,7 @@ class TreeNode:
             
         return root
     ```
+    
   *  Search (in BST)
     ```
     def search(root, val):
