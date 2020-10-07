@@ -1,3 +1,36 @@
+### Important terms
+* General
+  * Node and edge
+  * Root node and leaf node
+  * Neighbor (Parent node and child node)
+  * Levels
+* Binary tree
+  * A node has a maximum of 2 children (left and right)
+  * Maximum nodes at level L = 2 ^ L, where L = 0, 1, ... and L = 0 represents the level with root node.
+  * Types of binary tree
+    * Complete: Each level is complete except the last level. The last level is filled from left to right.
+    * Full: Each node has either 0 or 2 children.
+    * Perfect: Complete and full. Contains 2^h - 1 nodes, where h is the height of the tree..
+    * Balanced: Left height and right height differ by at most 1.
+* Binary Search Tree (BST)
+  * For all node, left < root < right
+* Tree node
+```
+class TreeNode:
+    def __init__(self, val=None):
+        self.val = val
+        self.left = None
+        self.right = None
+```
+* Basic operations
+  * Insert
+  *  Search
+  * Traversal
+    * DFS
+      * Preorder
+      * Inorder
+      * Postorder
+    * BFS
 
 ### Leetcode exeercises on trees
 * 297: Serialize and deserialize binary tree
