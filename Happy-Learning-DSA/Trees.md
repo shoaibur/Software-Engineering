@@ -52,3 +52,4 @@
 * 1305: All elements in two binary search trees
 * 701: Insert into a binary search tree
 * 1022: Sum of root to leaf binary numbers
+* 1602: Find nearest right node in binary tree
