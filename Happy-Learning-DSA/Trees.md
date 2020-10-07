@@ -23,8 +23,19 @@ class TreeNode:
         self.right = None
 ```
 * Basic operations
-  * Insert
-  *  Search
+  * Insert (into BST)
+    ```
+    def insert(root, val):
+        if not root: return TreeNode(val)
+        
+        if val < root.val:
+            root.left = insert(root.left, val)
+        else:
+            root.right = insert(root.right, val)
+            
+        return root
+    ```
+  *  Search (in BST)
   * Traversal
     * DFS
       * Preorder
