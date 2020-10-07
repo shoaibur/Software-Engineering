@@ -36,6 +36,16 @@ class TreeNode:
         return root
     ```
   *  Search (in BST)
+    ```
+    def search(root, val):
+        if not root: return None
+        if root.val == val: return root
+        
+        if val < root.val:
+            return search(root.left, val)
+        else:
+            return search(root.right, val)
+    ```
   * Traversal
     * DFS
       * Preorder
