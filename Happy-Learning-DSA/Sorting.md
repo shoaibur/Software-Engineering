@@ -72,6 +72,6 @@
       * At level 2, total number of operations = n/4 + n/4 + n/4 + n/4 = n
       * ...
       * At final level, total number of operations = 1 + 1 + ... + 1 = n
-      * Number of level = height of the tree = 1 + log n
-      * Therefore, O(n log n)
+      * Number of levels = height or depth of the tree = 1 + log n
+      * Therefore, O( (1 + log n) * n ) = O(n log n)
   * Space complexity: Auxiliary space required for left and right arrays, so O(n).
