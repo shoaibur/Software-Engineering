@@ -16,5 +16,7 @@ class Solution:
             if curSum == sumEachPart:
                 countParts += 1
                 curSum = 0 # Start over for the next part
-                if countParts > 3: return False
-        return countParts == 3
+                if countParts == 2:
+                    if len(A[i+1:]) > 0:
+                        return sum(A[i+1:]) == sumEachPart
+        return False
