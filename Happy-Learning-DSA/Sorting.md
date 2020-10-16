@@ -42,6 +42,33 @@
   ```
 * Complexity analysis
 
+## Bubble sort
+* Algorithm
+  ```
+  def bubbleSort(nums):
+    '''
+    T: O(n^2)
+    S: O(1)
+    '''
+    lastPosition = len(nums) - 1
+    
+    while True:
+        countSwap = 0
+        i = 1
+        
+        while i <= lastPosition:
+            if nums[i-1] > nums[i]:
+                nums[i-1], nums[i] = nums[i], nums[i-1]
+                countSwap += 1
+            i += 1
+            
+        lastPosition -= 1
+        if countSwap == 0: break
+            
+    return nums
+  ```
+* Complexity analysis
+
 
 ## Merge Sort
 * Algorithm
@@ -99,6 +126,12 @@
   * Space complexity: Auxiliary space required for left and right arrays, so O(n).
 
 
+## Quick sort
+* Algorithm
+  ```
+  ```
+* Complexity analysis
+
 ## Counting sort
 * Algorithm
   ```
@@ -135,6 +168,12 @@
 * Complexity analysis
 
 
+## Radix sort
+* Algorithm
+  ```
+  ```
+* Complexity analysis
+
 ## Bucket sort
 * Algorithm
   ```
@@ -164,5 +203,25 @@
     nums = [int(num) for num in nums]
     
     return nums
+  ```
+* Complexity analysis
+
+
+## Heap sort
+* Algorithm
+  ```
+  import heapq
+  def heapSort(nums):
+    '''
+    T: O(n log n)
+    S: O(n)
+    '''
+    sortedNums = []
+    
+    while nums:
+        heapq.heapify(nums)
+        sortedNums.append(nums.pop(0))
+    
+    return sortedNums
   ```
 * Complexity analysis
