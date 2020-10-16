@@ -21,6 +21,28 @@
   * Space complexity: in-place. O(1)
 
 
+## Selection sort
+* Algorithm
+  ```
+  def selectionSort(nums):
+    '''
+    Keep track of current position starting from the left and
+    swap its element with the min from its right.
+    T: O(n^2)
+    S: O(1)
+    '''
+    curPosition = 0
+    while curPosition < len(nums):
+        unsortedPart = nums[curPosition:]
+        minIndex = unsortedPart.index(min(unsortedPart)) + curPosition
+        nums[curPosition], nums[minIndex] = nums[minIndex], nums[curPosition]
+        curPosition += 1
+        
+    return nums
+  ```
+* Complexity analysis
+
+
 ## Merge Sort
 * Algorithm
   * Input: nums array
@@ -75,3 +97,72 @@
       * Number of levels = height or depth of the tree = 1 + log n
       * Therefore, O( (1 + log n) * n ) = O(n log n)
   * Space complexity: Auxiliary space required for left and right arrays, so O(n).
+
+
+## Counting sort
+* Algorithm
+  ```
+  def countingSort(nums):
+    if len(nums) <= 1: return nums
+    
+    # Initialize the counter with all zeros
+    minNum, maxNum = min(nums), max(nums)
+    counter = {}
+    for num in range(minNum, maxNum+1):
+        counter[num] = 0
+        
+    # Count the numbers in nums
+    for num in nums:
+        counter[num] += 1
+    
+    # Computer cumulative sum of the counter
+    # Key = number in nums; Value = index of the numbers in nums
+    curCount = 0
+    for num in counter:
+        counter[num] += curCount
+        curCount = counter[num]
+    
+    # Sort numbers in nums
+    sortedNums = [0] * len(nums)
+    for i in range(len(nums)-1, -1, -1):
+        num = nums[i]
+        index = counter[num] - 1
+        sortedNums[index] = num
+        counter[num] -= 1
+    
+    return sortedNums
+  ```
+* Complexity analysis
+
+
+## Bucket sort
+* Algorithm
+  ```
+  import collections
+
+  def bucketSort(nums):
+    '''
+    T: O(n*d); n=#items in nums, d=#digt in max num
+    S: O(n*d)
+    '''
+    # Get number of digits in max num and convert each number equal to that number of digits
+    maxNum = max(nums)
+    maxDigit = len(str(maxNum))
+    nums = ['0'*(maxDigit-len(str(num)))+str(num) for num in nums]
+    
+    # Put the numbers into buckets according to its digit (least to most significant)
+    for digit in range(maxDigit-1, -1, -1):
+        # Init buckets and fill it
+        buckets = collections.defaultdict(list)
+        for num in nums:
+            buckets[num[digit]].append(num)
+        # Sorted nums based on curret digit
+        nums = []
+        for bucket in buckets:
+            nums.extend(buckets[bucket])
+    # Convert each number into int again
+    nums = [int(num) for num in nums]
+    
+    return nums
+  ```
+* Complexity analysis
