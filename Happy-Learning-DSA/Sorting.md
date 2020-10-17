@@ -132,6 +132,31 @@
 ## Quick sort
 * Algorithm
   ```
+  def quickSort(nums):
+    '''
+    T: O(n log n) and S: O(1)
+    '''
+    def sort(nums, lo, hi):
+        def partition(nums, lo, hi):
+            i = lo - 1
+            pivot = nums[hi]
+            for j in range(lo, hi):
+                if nums[j] <= pivot:
+                    i += 1
+                    nums[i], nums[j] = nums[j], nums[i]
+            nums[i+1], nums[hi] = nums[hi], nums[i+1]
+            return i + 1
+
+        if len(nums) <= 1: return nums
+        if lo < hi:
+            k = partition(nums, lo, hi)
+            sort(nums, lo, k-1)
+            sort(nums, k+1, hi)
+        return nums
+    
+    lo = 0
+    hi = len(nums) - 1
+    return sort(nums, lo, hi)
   ```
 * Complexity analysis
 
