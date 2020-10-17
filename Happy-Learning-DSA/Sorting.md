@@ -6,19 +6,48 @@
       * Swap items between i-1 and i
   * Output: nums array
   ```
-  def insertion(nums):
-      n = len(nums)
-      for i in range(1, n):
-          j = i
-          while j > 0 and nums[j-1] > nums[j]:
-              nums[j-1], nums[j] = nums[j], nums[j-1]
-              j -= 1
-      return nums
+  def insertionSort(nums):
+    '''
+    T: O(n^2) and S: O(1)
+    '''
+    i = 1
+    while i < len(nums):
+        j = i - 1
+        while j >= 0:
+            if nums[j] > nums[j+1]:
+                nums[j], nums[j+1] = nums[j+1], nums[j]
+            j -= 1
+        i += 1
+    return nums
   ```
 * Complexity analysis
   * Time complexity: n-1 steps in the loop; maximum of n-1 compare and swap in each step. Therefore,
     * T(n) = T(n-1) * T(n-1) = O(n^2)
   * Space complexity: in-place. O(1)
+
+
+## Bubble sort
+* Algorithm
+  ```
+  def bubbleSort(nums):
+    '''
+    T: O(n^2) and S: O(1)
+    '''
+    lastPosition = len(nums) - 1
+    while True:
+        countSwap = 0
+        i = 1
+        while i <= lastPosition:
+            if nums[i-1] > nums[i]:
+                nums[i-1], nums[i] = nums[i], nums[i-1]
+                countSwap += 1
+            i += 1
+        lastPosition -= 1
+        if countSwap == 0: break
+            
+    return nums
+  ```
+* Complexity analysis
 
 
 ## Selection sort
@@ -42,33 +71,6 @@
   ```
 * Complexity analysis
 
-## Bubble sort
-* Algorithm
-  ```
-  def bubbleSort(nums):
-    '''
-    T: O(n^2)
-    S: O(1)
-    '''
-    lastPosition = len(nums) - 1
-    
-    while True:
-        countSwap = 0
-        i = 1
-        
-        while i <= lastPosition:
-            if nums[i-1] > nums[i]:
-                nums[i-1], nums[i] = nums[i], nums[i-1]
-                countSwap += 1
-            i += 1
-            
-        lastPosition -= 1
-        if countSwap == 0: break
-            
-    return nums
-  ```
-* Complexity analysis
-
 
 ## Merge Sort
 * Algorithm
@@ -81,29 +83,36 @@
   * Output: mergedSorted
   ```
   def mergeSort(nums):
-      if len(nums) <= 1: return nums
-      
-      def divide(nums):
-          mid = len(nums) // 2
-          left = nums[:mid]
-          right = nums[mid:]
-          return left, right
-          
-      def merge(left, right):
-          nLeft = len(left)
-          nRight = len(right)
-          mergedSorted = []
-          i, j = 0, 0
-          while i < nLeft or j < nRight:
-              vLeft = left[i] if i < nLeft else float('inf')
-              vRight = right[j] if j < nRight else float('inf')
-              if vLeft < vRight:
-                  mergedSorted.append(vLeft)
-                  i += 1
-              else:
-                  mergedSorted.append(vRight)
-                  j += 1
-          return mergedSorted
+    '''
+    T: O(n log n) and S: O(n)
+    '''
+    if len(nums) <= 1: return nums
+    
+    def divide(nums):
+        mid = len(nums) // 2
+        left = nums[:mid]
+        right = nums[mid:]
+        return left, right
+    
+    def merge(left, right):
+        nLeft, nRight = len(left), len(right)
+        merged = []
+        i, j = 0, 0
+        while i < nLeft or j < nRight:
+            vLeft = left[i] if i < nLeft else float('inf')
+            vRight = right[j] if j < nRight else float('inf')
+            if vLeft < vRight:
+                merged.append(vLeft)
+                i += 1
+            else:
+                merged.append(vRight)
+                j += 1
+        return merged
+    
+    left, right = divide(nums)
+    left = mergeSort(left)
+    right = mergeSort(right)
+    return merge(left, right)
       
       left, right = divide(nums)
       left = mergeSort(left)
@@ -184,6 +193,7 @@
     T: O(n*d); n=#items in nums, d=#digt in max num
     S: O(n*d)
     '''
+    if len(nums) <= 1: return nums
     # Get number of digits in max num and convert each number equal to that number of digits
     maxNum = max(nums)
     maxDigit = len(str(maxNum))
@@ -211,17 +221,18 @@
 * Algorithm
   ```
   import heapq
+  
   def heapSort(nums):
     '''
-    T: O(n log n)
-    S: O(n)
+    T: O(n log n) and S: O(n)
     '''
+    copyNums = nums.copy()
     sortedNums = []
     
-    while nums:
-        heapq.heapify(nums)
-        sortedNums.append(nums.pop(0))
-    
+    while copyNums:
+        heapq.heapify(copyNums)
+        sortedNums.append(copyNums.pop(0))
+        
     return sortedNums
   ```
 * Complexity analysis
