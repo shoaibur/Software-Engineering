@@ -113,12 +113,6 @@
     left = mergeSort(left)
     right = mergeSort(right)
     return merge(left, right)
-      
-      left, right = divide(nums)
-      left = mergeSort(left)
-      right = mergeSort(right)
-      mergedSorted = merge(left, right)
-      return mergedSorted
   ```
   
   * Complexity analysis
