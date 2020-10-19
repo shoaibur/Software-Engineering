@@ -297,3 +297,38 @@
     return sortedNums
   ```
 * Complexity analysis
+
+
+## Test sorting algorithms
+
+```
+import random
+n, x = 50000, 30
+
+nums = random.sample(range(n), x)
+print('Insertion sort:', insertionSort(nums)==sorted(nums))
+
+nums = random.sample(range(n), x)
+print('Bubble sort:', bubbleSort(nums)==sorted(nums))
+
+nums = random.sample(range(n), x)
+print('Selection sort:', selectionSort(nums)==sorted(nums))
+
+nums = random.sample(range(n), x)
+print('Merge sort:', mergeSort(nums)==sorted(nums))
+
+nums = random.sample(range(n), x)
+print('Quick sort: ', quickSort(nums)==sorted(nums))
+
+nums = random.sample(range(n), x)
+print('Counting sort:', countingSort(nums)==sorted(nums))
+
+nums = random.sample(range(n), x)
+print('Radix sort:', radixSort(nums)==sorted(nums))
+
+nums = random.sample(range(n), x)
+print('Bucket sort:', bucketSort(nums)==sorted(nums))
+
+nums = random.sample(range(n), x)
+print('Heap sort:', heapSort(nums)==sorted(nums))
+```
