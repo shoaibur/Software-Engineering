@@ -171,6 +171,13 @@
 
 ## Counting sort
 * Algorithm
+  * Input from a small range k integer, 0 to k-1
+  * Loop through items, incrementing a counter (key = index, value = count)
+  * Compute cumulative sum of the counter array
+  * Loop through items in reverse order and:
+    * Use item key to index the count array
+    * Decrement that count array
+    * Use decremented value as array index to copy item into sorted array
   ```
   def countingSort(nums):
     if len(nums) <= 1: return nums
