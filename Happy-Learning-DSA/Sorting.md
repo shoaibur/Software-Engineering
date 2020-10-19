@@ -1,3 +1,12 @@
+# Searching Algorithms
+
+## Linear search
+
+## Binary search
+
+
+# Sorting Algorithms
+
 ## Insertion sort
 * Algorithm
   * Input: nums array
