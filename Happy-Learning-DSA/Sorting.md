@@ -191,7 +191,10 @@
         sortedNums[index] = num
         counter[num] -= 1
     
-    return sortedNums
+    for i in range(len(sortedNums)):
+        nums[i] = sortedNums[i]
+    
+    return nums
   ```
 * Complexity analysis
 
@@ -199,14 +202,45 @@
 ## Radix sort
 * Algorithm
   ```
+  def radixSort(nums):
+    '''
+    T: O(n*d); n=#items in nums, d=#digt in max num
+    S: O(n)
+    '''
+    def countingSort(nums, digitIndex):
+        '''digitIndex: LSB-->0 and MSB-->n-1
+        T: O(n) and S: O(n)'''
+        n = len(nums)
+        output = [0] * n
+        count = [0] * 10
+
+        for i in range(n):
+            index = (nums[i] // 10**digitIndex) % 10
+            count[index] += 1
+        for i in range(1, 10):
+            count[i] += count[i-1]
+
+        for i in range(n-1, -1, -1):
+            index = (nums[i] // 10**digitIndex) % 10
+            output[count[index] - 1] = nums[i]
+            count[index] -= 1
+        
+        for i in range(n):
+            nums[i] = output[i]
+            
+    # Apply counting sort for each digit from LSB to MSB
+    if len(nums) <= 1: return nums
+    maxDigitLen = len(str(max(nums)))
+    for digitIndex in range(maxDigitLen):
+        countingSort(nums, digitIndex)
+    
+    return nums
   ```
 * Complexity analysis
 
 ## Bucket sort
 * Algorithm
   ```
-  import collections
-
   def bucketSort(nums):
     '''
     T: O(n*d); n=#items in nums, d=#digt in max num
@@ -221,7 +255,7 @@
     # Put the numbers into buckets according to its digit (least to most significant)
     for digit in range(maxDigit-1, -1, -1):
         # Init buckets and fill it
-        buckets = collections.defaultdict(list)
+        buckets = {str(i): [] for i in range(10)}
         for num in nums:
             buckets[num[digit]].append(num)
         # Sorted nums based on curret digit
@@ -240,7 +274,6 @@
 * Algorithm
   ```
   import heapq
-  
   def heapSort(nums):
     '''
     T: O(n log n) and S: O(n)
