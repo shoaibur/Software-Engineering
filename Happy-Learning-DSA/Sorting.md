@@ -37,6 +37,10 @@
 
 ## Bubble sort
 * Algorithm
+  * Input: nums array
+  * For each item:
+    * Swap item with its next right until item > next right item
+  * Output: nums array
   ```
   def bubbleSort(nums):
     '''
