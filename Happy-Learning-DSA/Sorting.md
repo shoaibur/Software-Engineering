@@ -61,6 +61,7 @@
     return nums
   ```
 * Complexity analysis
+  * Time: O(n ^ 2) and space: O(1)
 
 
 ## Selection sort
