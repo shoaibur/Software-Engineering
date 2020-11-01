@@ -20,3 +20,15 @@
   * Wrapper class: Long
   * Long.MIN_VALUE = -2^63
   * Long.MIN_VALUE = 2^64 - 1
+
+
+### 2 primitive types for floating point numbers
+* float -- Occupies 32 bits
+  * Wrapper class: Float
+  * Float.MIN_VALUE = 1.4E-45
+  * Float.MIN_VALUE = 3.4028235E38
+
+* double -- Occupies 64 bits
+  * Wrapper class: Double
+  * Double.MIN_VALUE = 4.9E-324
+  * Double.MIN_VALUE = 1.7976931348623157E308
