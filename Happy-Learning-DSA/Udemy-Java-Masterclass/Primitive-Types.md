@@ -32,3 +32,10 @@
   * Wrapper class: Double
   * Double.MIN_VALUE = 4.9E-324
   * Double.MIN_VALUE = 1.7976931348623157E308
+
+### char primitive type for characters
+* char - Occupies 16 bits
+  * Can store only one character, e.g. char myChar = 'D';
+  * Unicode equivalent: char myChar = '\u0044';
+    * Unicode table: unicode-table.com
+  
