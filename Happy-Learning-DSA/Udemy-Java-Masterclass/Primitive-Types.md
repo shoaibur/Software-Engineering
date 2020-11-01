@@ -33,9 +33,13 @@
   * Double.MIN_VALUE = 4.9E-324
   * Double.MIN_VALUE = 1.7976931348623157E308
 
-### char primitive type for characters
+### 1 primitive type for characters
 * char - Occupies 16 bits
   * Can store only one character, e.g. char myChar = 'D';
+    * Note the use of single quotation instead of double quotation mark. Double quotation mark is used for String data type.
   * Unicode equivalent: char myChar = '\u0044';
     * Unicode table: unicode-table.com
-  
+    
+### 1 primitive type for logic
+* boolean - true or false
+  * Example: boolean isCustomerOverTweentyOne = true;
