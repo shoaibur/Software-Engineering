@@ -45,7 +45,6 @@
       * Example: `boolean isCustomerOverTweentyOne = true;`
 
 
-
 # Operators
 * Basics and terminologies
   * Let say, int myVal = valA + valB
@@ -56,7 +55,7 @@
 
 * Commenting in Java
   * Line comment
-    * `// This is a commented line`
+  ```// This is a commented line```
   * Section comment
   ```
   /*
