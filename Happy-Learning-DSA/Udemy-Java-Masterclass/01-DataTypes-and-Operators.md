@@ -43,3 +43,43 @@
     * boolean
       * Takes a value of either `true` or `false`
       * Example: `boolean isCustomerOverTweentyOne = true;`
+
+
+
+# Operators
+* Basics and terminologies
+  * Let say, int myVal = valA + valB
+  * Operator: = and +
+  * Operand: valA and valB
+  * Expression: myVal = valA + valB
+  * Statement: int myVal = valA + valB
+
+* Commenting in Java
+  * Line comment
+    * `// This is a commented line`
+  * Section comment
+  ```
+  /*
+  Commented code here, could be
+  in different lines
+  */
+  ```
+  
+* Arithmetic operators
+  * Add `+`, subtract `-`, divide `/`, multiply `*`, modulus `%`
+  * Abbreviations: `i++`, `i--`, `i += 2`, `i *= 2`
+
+* Assignment operator: `=`
+* Comparator operators: `==`, `!=`, `<`, `>`, `<=`, `>=`
+
+* Logical operators
+  * Logical AND `&&`, Logical OR `||`, Logical NOT `!`
+* Bitwise operator
+  * AND `&`, OR `|`, XOR `^`, NOT `~`
+
+* Ternary operators:
+  * Example: Following code implies: if isWater is true then isLife is true, else isLife is false)
+  ```
+  boolean isWater = false;
+  boolean isLife = isWater ? true : false;
+  ```
