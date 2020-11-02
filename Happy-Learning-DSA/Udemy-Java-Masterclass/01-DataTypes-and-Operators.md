@@ -1,4 +1,17 @@
-# Primitive types
+# Primitive data types
+
+* 8 Primitive Data Types
+  * 4 data types of whole numbers
+    * byte
+    * short
+    * int
+    * long
+  * 2 data tyeps for floating point numbers
+    * float
+    * double
+  * 2 other data types
+    * char
+    * boolean
 
 ### 4 primitive types for whole numbers
 * byte -- Occupies 8 bits
@@ -43,3 +56,6 @@
 ### 1 primitive type for logic
 * boolean - true or false
   * Example: boolean isCustomerOverTweentyOne = true;
+
+
+# Operators
