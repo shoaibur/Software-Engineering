@@ -47,15 +47,17 @@
 
 # Operators
 * Basics and terminologies
-  * Let say, int myVal = valA + valB
-  * Operator: = and +
-  * Operand: valA and valB
-  * Expression: myVal = valA + valB
-  * Statement: int myVal = valA + valB
+  * Let say, `int myVal = valA + valB`
+  * Operator: `=` and `+`
+  * Operand: `valA` and `valB`
+  * Expression: `myVal = valA + valB`
+  * Statement: `int myVal = valA + valB`
 
 * Commenting in Java
   * Line comment
-  ```// This is a commented line```
+  ```
+  // This is a commented line
+  ```
   * Section comment
   ```
   /*
@@ -67,16 +69,20 @@
 * Arithmetic operators
   * Add `+`, subtract `-`, divide `/`, multiply `*`, modulus `%`
   * Abbreviations: `i++`, `i--`, `i += 2`, `i *= 2`
+  
+* Assignment operator
+  * `=`
 
-* Assignment operator: `=`
-* Comparator operators: `==`, `!=`, `<`, `>`, `<=`, `>=`
+* Comparison operators
+  * `==`, `!=`, `<`, `>`, `<=`, `>=`
 
 * Logical operators
   * Logical AND `&&`, Logical OR `||`, Logical NOT `!`
-* Bitwise operator
+
+* Bitwise operators
   * AND `&`, OR `|`, XOR `^`, NOT `~`
 
-* Ternary operators:
+* Ternary operators
   * Example: Following code implies: if isWater is true then isLife is true, else isLife is false)
   ```
   boolean isWater = false;
