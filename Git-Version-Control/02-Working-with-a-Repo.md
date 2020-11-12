@@ -7,7 +7,7 @@
 
 ## Creating a repo
 * Create a repo from scratch
-  * `git init`
+  * `git init` Will create `.git` directory
 * Clone a repo from a url
   * `git clone url`
 
@@ -25,6 +25,11 @@
   * `git rm --cached file1`
 * Display changes in modified but uncommitted files
   * `git diff`
+
+## Ignore tracking specific files
+* Create a directory named `.gitignore` at the same directory where `.git` directory is.
+  * `touch .gitignore`
+* Open `.gitignore` (i.e., `vim .gitignore`) and add file names not to be tracked (each file in separate lines)
 
 ## Commit message
   * type: Give a short description of the commit
