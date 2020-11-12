@@ -15,3 +15,14 @@
 * `git checkout -b footer master` Create and switch to footer branch, which is in same commit as the master branch
 * `git branch -d sidebar` Deletes sidebar
 * `git log --oneline --graph --all` Shows all branches together
+
+## Merging
+* `git merge OtherBranch` Merge "other branch" with the current branch)
+* Two types of merging:
+  * Fast-forward
+    * The branch being merged in must be ahead of the current branch (checked out branch).
+		* Current branch's pointer moves forward to point to the same commit as the other branch.
+		* No commit is created.
+  * Auto-merging (Regular)
+    * Two divergent branches are merged
+		* A merge commit is created
