@@ -1,10 +1,10 @@
 # Git Version Control Overview
 
-1. Getting started
-2. Working with a repo
-3. Review commit history
-4. Tagging, branching and merging
-5. Undoing changes 
+1. [Getting started](#1-getting-started-with-git)
+2. [Working with a repo](#2-working-with-a-repo)
+3. [Review commit history](#3-review-commit-history)
+4. [Tagging, branching and merging](#4-tagging-branching-and-mergering)
+5. [Undoing changes ](#5-undoing-changes)
 6. [Git remote](#6-git-remote)
 
 
