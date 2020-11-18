@@ -114,6 +114,15 @@ selected	2	3	4	5	6
 4		2*	3*	8*	6*	9
 ```
 
+* Bellman-Ford algorithm:
+  * Step 0:
+    * List all pairs of edges
+    * Count number of the vertex = n
+  * Step 1: Assign gain 0 to source node and gain infinity to all other nodes
+  * Step 2: For each edge, relax nodes using the relaxation formula above
+  * Step 3: Continue step 2 for (n-1) times
+    * if gains of nodes do not change/update, stop before loop through all n-1 times.
+
 
 ### Topological sorting
 * Graph must be Directed and Acyclic Graph (DAG)
