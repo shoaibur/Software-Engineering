@@ -1,6 +1,6 @@
 # Git Version Control Summary
 
-![alt text](https://github.com/shoaibur/SWE/blob/main/Git-Version-Control/Git-Images/git_work_flow.png)
+![alt text](https://github.com/shoaibur/SWE/blob/main/Git-Version-Control/Git-Images/git_workflow.png)
 
 # Details Overview
 1. [Getting started](#1-getting-started-with-git)
