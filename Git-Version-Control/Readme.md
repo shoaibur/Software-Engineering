@@ -1,5 +1,8 @@
-# Git Version Control Overview
+# Git Version Control Summary
 
+![alt text](https://github.com/shoaibur/SWE/blob/main/Git-Version-Control/Git-Images/git_work_flow.png)
+
+# Details Overview
 1. [Getting started](#1-getting-started-with-git)
 2. [Working with a repo](#2-working-with-a-repo)
 3. [Review commit history](#3-review-commit-history)
