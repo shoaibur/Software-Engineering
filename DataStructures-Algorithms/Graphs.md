@@ -90,6 +90,7 @@ print(dfs(adj, 0))
 		       gain[v] = gain[u] + cost(u, v)
      ```
   * Step 4: Select the node with minimum gain from remaining nodes, i.e., from the nodes that have not been considered as visiting node yet, and repeat step 3. Continue until each node is considered as the visiting node.
+  * *Dijkstra result may or may not be correct if one or more weights are negatives.
   * Time complexity: We visit all vertices and at each visiting node we relax all its connected node, so O(V.V) = O(n^2)
   * Example:
 ```
@@ -122,7 +123,21 @@ selected	2	3	4	5	6
   * Step 2: For each edge, relax nodes using the relaxation formula above
   * Step 3: Continue step 2 for (n-1) times
     * if gains of nodes do not change/update, stop before loop through all n-1 times.
+  * Return distances/gains obtained in the last update.
+  * *Bellman-Ford fails if there exists a loop with net negative weights.
 
+* Floyd-Warshall algorithm:
+  * Step 0: Count number of vertices = n
+  * Step 1: Create an n x n matrix (A<sup>0</sup>)
+    * Each row represents source nodes and each col represents destination nodes.
+    * Fill out the matrix with distance values from source to destination.
+    * Note that diagonals are zero (i.e., source and destination are same).
+  * Step 2: Update matrix to A<sup>1</sup>, A<sup>2</sup>, ..., A<sup>n</sup>. To compute A<sup>k</sup>:
+    * Don't change values for row/col for kth node, i.e., use same values from A<sup>k-1</sup>
+    * Keep diagonals 0
+    * Update other elements using the following formula:
+      * A<sup>k</sup>[i, j] = min { A<sup>k-1</sup>[i, j], A<sup>k-1</sup>[i, k] + A<sup>k-1</sup>[j, k] }
+  * Return pairwise distances represented in A<sup>n</sup>
 
 ### Topological sorting
 * Graph must be Directed and Acyclic Graph (DAG)
