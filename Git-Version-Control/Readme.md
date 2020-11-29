@@ -175,3 +175,6 @@
 * Force push: DANGEROUS! Local will replace remote. If there were any updates in remote but not synced with local, those updates will be lost.
   * `git push -f origin`
   * `git push -f origin HEAD:master`
+* Push an empty commit to a specified date
+  * git commit --allow-empty --date="Thu Jul 30 12:00:00 2020 -0600" -m 'Empty commit'
+  * git push origin main
