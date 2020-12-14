@@ -1,2 +1,7 @@
-# SWE
-Software Development Engineering
+# Essentials of Software Engineering
+
+Data Structures and Algorithms
+
+Distributed Systems
+
+Building Software Skills
