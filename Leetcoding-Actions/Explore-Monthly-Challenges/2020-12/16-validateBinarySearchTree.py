@@ -6,6 +6,9 @@
 #         self.right = right
 class Solution:
     def isValidBST(self, root: TreeNode) -> bool:
+        '''
+        T: O(n) and S: O(n)
+        '''
         prev = float('-inf')
         stack = []
         curr = root
