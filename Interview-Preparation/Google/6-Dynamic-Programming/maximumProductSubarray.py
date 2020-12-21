@@ -1,0 +1,19 @@
+class Solution:
+    def maxProduct(self, nums: List[int]) -> int:
+        '''
+        T: O(n) and S: O(1)
+        '''
+        if not nums: return 0
+        
+        maxProd = nums[0]
+        currProdMax = nums[0]
+        currProdMin = nums[0]
+        
+        for num in nums[1:]:
+            if num < 0:
+                currProdMax, currProdMin = currProdMin, currProdMax
+            currProdMax = max(currProdMax * num, num)
+            currProdMin = min(currProdMin * num, num)
+            maxProd = max(maxProd, currProdMax)
+            
+        return maxProd
