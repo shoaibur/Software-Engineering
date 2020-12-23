@@ -69,10 +69,34 @@ print(dfs(adj, 0))
   * Number of possible spanning tree = E_C_(V-1) - number of cycles in graph
 * MST is a spanning tree that gives minimum cost (sum of edges’ weights). So, it’s a optimization problem, which can be solved using greedy methods. Two widely used algorithms are:
   * Prim’s algorithm:
-    * Start with minimum cost edge
-    * Continue with the next minimum cost edge connected to already considered vertices
+    * Start with any node
+    * Continue with the next minimum cost edge connected to already considered nodes
     * Stop when the number of edges is equal to V - 1
-
+    
+    ```
+    def primsMST(connections, N):
+        #connections is a list: connections[i] = [node_x, node_y, cost] where x, y = 1, 2, ..., N
+	
+        graph = collections.defaultdict(list)
+        for connection in connections:
+            node1, node2, cost = connection
+            graph[node1].append((node2,cost))
+            graph[node2].append((node1,cost))
+        
+        visited = set()
+        minCost = 0
+        minHeap = [(1,0)] # start with node 1, at node 1 cost is 0
+        while minHeap:
+            node, cost = heapq.heappop(minHeap)
+            if node not in visited: # Add node to the network
+                visited.add(node)
+                minCost += cost
+            for neighbor, cost in graph[node]:
+                if neighbor not in visited: # Add node to the heap
+                    heapq.heappush(minHeap, (neighbor, cost))
+        return minCost if len(visited) == N else -1
+    ```
+    
   * Krushkals algorithm
     * Start with the minimum cost edge
     * Continue with the next minimum cost edge, but skip if that forms any loop
