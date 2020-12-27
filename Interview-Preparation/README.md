@@ -1,6 +1,6 @@
 **Background:**
 
-* PhD from a top medical school in the US and BS from a non-US school.
+* PhD from a top US medical school and BS from a non-US school.
 * No CS background, except few online courses (mainly enrolled for fun during the lockdown). Please note that although I had little knowledge about data structures/algorithms when I enrolled the courses, I came from a computational background with coding skills in Matlab and Python. So, it was not super hard for me to learn CS fundamentals.
 * Experience: 6 months in an Oil and Gas industry
 * Interviewed for software roles at Google, Amazon, and Facebook between June and September 2020.
