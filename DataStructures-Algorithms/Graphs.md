@@ -2,64 +2,64 @@
 * Adjacency matrix
 * Adjacency list
   * Example graph representation with adjacency list
-```
-n = 4 # of nodes with ids: 0,1,2,3
-edges = [[0,1], [0,2], [1,2], [2,0], [2,3]]
+	```
+	n = 4 # of nodes with ids: 0,1,2,3
+	edges = [[0,1], [0,2], [1,2], [2,0], [2,3]]
 
-def buildGraph(edges):
-    adj = collections.defaultdict(list)
-    for edge in edges:
-        adj[edge[0]].append(edge[1])
-    return adj
-```
+	def buildGraph(edges):
+	    adj = collections.defaultdict(list)
+	    for edge in edges:
+		adj[edge[0]].append(edge[1])
+	    return adj
+	```
 ### Graph traversal
 * BFS
-```
-def bfs(graph, startNode):
-    q = collections.deque()
-    q.append(startNode)
-    
-    visited = set()
-    visited.add(startNode)
-    
-    nodes = []
-    
-    while q:
-        currNode = q.popleft()
-        nodes.append(currNode)
-        for neighbor in graph[currNode]:
-            if neighbor not in visited:
-                visited.add(neighbor)
-                q.append(neighbor)
-    return nodes
+	```
+	def bfs(graph, startNode):
+	    q = collections.deque()
+	    q.append(startNode)
 
-adj = buildGraph(edges)
-print(bfs(adj, 0))
-```
+	    visited = set()
+	    visited.add(startNode)
+
+	    nodes = []
+
+	    while q:
+		currNode = q.popleft()
+		nodes.append(currNode)
+		for neighbor in graph[currNode]:
+		    if neighbor not in visited:
+			visited.add(neighbor)
+			q.append(neighbor)
+	    return nodes
+
+	adj = buildGraph(edges)
+	print(bfs(adj, 0))
+	```
 
 * DFS
-```
-def dfs(graph, startNode):
-    q = []
-    q.append(startNode)
-    
-    visited = set()
-    visited.add(startNode)
-    
-    nodes = []
-    
-    while q:
-        currNode = q.pop()
-        nodes.append(currNode)
-        for neighbor in graph[currNode]:
-            if neighbor not in visited:
-                visited.add(neighbor)
-                q.append(neighbor)
-    return nodes
+	```
+	def dfs(graph, startNode):
+	    q = []
+	    q.append(startNode)
 
-adj = buildGraph(edges)
-print(dfs(adj, 0))
-```
+	    visited = set()
+	    visited.add(startNode)
+
+	    nodes = []
+
+	    while q:
+		currNode = q.pop()
+		nodes.append(currNode)
+		for neighbor in graph[currNode]:
+		    if neighbor not in visited:
+			visited.add(neighbor)
+			q.append(neighbor)
+	    return nodes
+
+	adj = buildGraph(edges)
+	print(dfs(adj, 0))
+	```
 
 ### Minimum Spanning Tree
 * Spanning tree is generated from a weighted graph G(V, E). The graph could be directed or undirected.
@@ -85,7 +85,7 @@ print(dfs(adj, 0))
         
         visited = set()
         minCost = 0
-        minHeap = [(1,0)] # start with node 1, at node 1 cost is 0
+        minHeap = [(0,1)] # start with node 1 and init cost 0
         while minHeap:
             node, cost = heapq.heappop(minHeap)
             if node not in visited: # Add node to the network
@@ -93,7 +93,7 @@ print(dfs(adj, 0))
                 minCost += cost
             for neighbor, cost in graph[node]:
                 if neighbor not in visited: # Add node to the heap
-                    heapq.heappush(minHeap, (neighbor, cost))
+                    heapq.heappush(minHeap, (cost, neighbor))
         return minCost if len(visited) == N else -1
     ```
     
