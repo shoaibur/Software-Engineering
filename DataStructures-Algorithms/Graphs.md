@@ -40,21 +40,21 @@
 * DFS
 	```
 	def dfs(graph, startNode):
-	    q = []
-	    q.append(startNode)
-
-	    visited = set()
-	    visited.add(startNode)
-
+	    stack = []
+	    stack.append(startNode)
+	    
 	    nodes = []
-
-	    while q:
-		currNode = q.pop()
+	    visited = set()
+	    
+	    while stack:
+		currNode = stack.pop()
+		visited.add(currNode)
 		nodes.append(currNode)
+		
 		for neighbor in graph[currNode]:
 		    if neighbor not in visited:
 			visited.add(neighbor)
-			q.append(neighbor)
+			stack.append(neighbor)
 	    return nodes
 
 	adj = buildGraph(edges)
