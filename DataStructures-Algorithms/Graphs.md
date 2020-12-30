@@ -169,3 +169,31 @@ selected	2	3	4	5	6
   * For each node, run a DFS in which
     * Maintain a visited set, and add the current node to the visited set.
     * For each neighbor of the current node, call DFS recursively.
+    ```
+    def findOrder(numCourses, prerequisites):
+        graph = defaultdict(list)
+        inDeg = [0] * numCourses
+        for u,v in prerequisites:
+            graph[v].append(u)
+            inDeg[u] += 1
+        
+        q = deque()
+        for u in range(numCourses):
+            if inDeg[u] == 0:
+                q.append(u)
+        
+        count = 0
+        order = []
+        while q:
+            v = q.popleft()
+            for u in graph[v]:
+                inDeg[u] -= 1
+                if inDeg[u] == 0:
+                    q.append(u)
+            count += 1
+            order.append(v)
+        
+        if count != numCourses:
+            return []
+        return order
+    ```
