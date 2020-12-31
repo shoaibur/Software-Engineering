@@ -2,7 +2,7 @@
 
 * PhD from a top US medical school and BS from a non-US school.
 * No CS background, but had good coding skills in Matlab and Python; took an online course on data structures/algorithms (mainly enrolled for fun during the lockdown).
-* Experience: < 1 year in an Oil and Gas industry (non-SDE roles)
+* Experience: < 1 year (non-SDE role)
 * Interviewed for software roles at Google, Amazon, and Facebook between June and September 2020.
 
 **Google**:
