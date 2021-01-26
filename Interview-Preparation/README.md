@@ -13,11 +13,10 @@ Applied online and let a recruiter know whom I knew (not very well though).
 Contacted a recruiter via LinkedIn. The recruiter asked me to take an online assessment.
 * Online assessment: Two questions from AMCAT in 90 minutes. My coding style was good, one team manager told the recruiter!
 * Virtual onsite:
-  * Round 1: System design - A simple system (available in almost all relevant resources). However, it was my first design interview, and it did not go well. I was in the right direction, but couldn't manage the time well, so I missed to discuss some important parts.
-  * Round 2: Coding - Most important reviews (not directly from LC, closest match: #347). I came up with multiple solutions and coded the one using heap data structure; answered follow-up questions, including analyses. I guess it was the "bar-raiser".
-  * Round 3: Coding - Graph problem (directly from LC, one of the island problems). I didn't practice this one beforehand but was able to come up with a solution. However, I couldn't code it. This round didn't go well.
-  * Round 4: Coding - Topological sorting (not directly from LC, closest match: #210). The interviewer was looking for a specific way to solve, so s/he guided me in that direction whenever I was trying in my ways. Overall, this round went well.
-  * Leadership principles: They appear for the first ~30 minutes in each round; they are inarguably important for Amazon interviews.
+  * Round 1: System design + LP - A simple system (available in almost all relevant resources). However, it was my first design interview, and it did not go well. I was in the right direction, but couldn't manage the time well, so I missed to discuss some important parts.
+  * Round 2: Coding + LP - Most important reviews (not directly from LC, closest match: #347). I came up with multiple solutions and coded the one using heap data structure; answered follow-up questions, including analyses. I guess it was the "bar-raiser".
+  * Round 3: Coding + LP - Graph problem (directly from LC, one of the island problems). I didn't practice this one beforehand but was able to come up with a solution. However, I couldn't code it. This round didn't go well.
+  * Round 4: Coding + LP - Topological sorting (not directly from LC, closest match: #210). The interviewer was looking for a specific way to solve, so s/he guided me in that direction whenever I was trying in my ways. Overall, this round went well.
 * Offer: SDE I (entire process took ~3 months)
 
 **Facebook**:
@@ -29,7 +28,6 @@ The recruiter contacted me (perhaps s/he got my resume from another role I appli
   * Round 3: Coding - Interval sorting (not directly from LC, but could be characterized as a combination of 2-3 FB-tagged LC medium). It looked like the interviewer studied LC and designed the problem carefully to test multiple knowledge levels. I did well with one hint in the beginning.
   * Round 4: Distributed system design - Similar to designing Yelp, but not exactly the same. I needed little guidance.
   * Round 5: ML system design - Image/text classification, or at least, I (re)formulated the problem as a classification one. The interviewer asked a lot of questions. I couldn't finish all the details on time but covered many parts.
-  * Feedback from the recruiter: My coding skill was strong, and my system/ML designs were good, but the lack of experience was obvious in the behavioral round. (*To be honest, it was hard to address all behavioral questions only with grad school research experience; better to keep this in mind when interviewing for a senior position with limited experience*).
 * Offer: E4 (entire process took ~5 months, because of E4 hiring freeze)
 
 **Take home**
@@ -37,4 +35,7 @@ The recruiter contacted me (perhaps s/he got my resume from another role I appli
 * Persistence! Try to solve at least one (old/new) problem everyday. I kept track of how many problems I would solve each day via github (to keep myself motivated). I haven't missed a single day since May until today. I solved ~200 and ~300 LC problems for Amazon and Facebook, respectively. I surely couldn't remember many of them, but solved some problems several times, which helped me to think the same problem from multiple perspectives.
 * Take time: If you are naive, try to give at least 6 months before the first interview; you may want to stabilize your understanding (even if memorizing) the solutions. From the day of my first leetcode submission, I interviewed at Google in two weeks, at Amazon in two months and at Facebook in four months. My performance order was: Facebook > Amazon >> Google.
 * Take mock tests with people: I took several mock tests on LC. However, after the Amazon interview, I realized that I was not good enough in coding and talking simultaneously. So, before the Facebook interview, I practiced with my wife; she is not programmer, but she would randomly pick one problem over our Skype calls,a nd I pretended her as a real interviewer. This helped me!
-* Facebook vs. Amazon: No significant differences! FB's questions were much similar to what is available in LC, but FB's bar seemed higher to me. Leadership principles are important for Amazon - they may take more than 50% of the total interview duration.
+* Facebook vs. Amazon: No significant differences! Some minors are:
+  * FB's questions were much similar to what is available in LC, but FB's bar seemed higher to me.
+  * Leadership principles are important for Amazon - they may take more than 50% of the total interview duration. I didn't take them seriously and that cost me a level.
+  * Amazon gave no feedback, but Facebook did, which was quite useful: My coding skill was strong, and my system/ML designs were good, but the lack of experience was obvious in the behavioral round. (*To be honest, it was hard to address all behavioral questions only with grad school research experience; so keep this in mind when interviewing for a senior position with limited experience*).
