@@ -1,5 +1,8 @@
 class Solution:
     def threeSumMulti(self, arr: List[int], target: int) -> int:
+        '''
+        T: O(n^2) and S: O(1)
+        '''
         MOD = 10**9 + 7
         ans = 0
         arr.sort()
