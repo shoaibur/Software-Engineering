@@ -178,3 +178,5 @@
 * Push an empty commit to a specified date
   * git commit --allow-empty --date="Thu Jul 30 12:00:00 2020 -0600" -m 'Empty commit'
   * git push origin main
+* To disable SSL verification for a specific repo, run:
+  * `git config --global http.sslVerify false` This also reset the clock to local time.
