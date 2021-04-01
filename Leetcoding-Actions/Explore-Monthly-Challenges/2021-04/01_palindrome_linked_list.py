@@ -5,6 +5,9 @@
 #         self.next = next
 class Solution:
     def isPalindrome(self, head: ListNode) -> bool:
+        '''
+        T: O(n) and S: O(1)
+        '''
         if not head: return True
         if head.next is None: return True
         if head.next.next is None:
