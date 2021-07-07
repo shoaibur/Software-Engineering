@@ -1,0 +1,37 @@
+In this complexity analysis:
+1) The worst case scenario, i.e., Big O have a been reported.
+2) Any constant in the complexity computation was neglected.
+
+Task0:
+# Retrieval of one record from a list has a constant runtime, i.e., O(1).
+# Assuming that printing does not require additional space.
+# So, for both of the operations above, runtime is O(1) and space is O(1).
+
+
+Task1:
+# n = number of records in texts
+# m = number of records in calls
+# Time: O(m + n) --> traverse both texts and calls records
+# Space: O(m + n) --> to save the dictionary "numbers"
+
+
+Task2:
+# m = number of records in the calls
+# Time: O(m) --> traverse call records
+# Space: O(1) --> No additional (except a constant) space is used
+
+
+Task3:
+Part A:
+# Time: O(m + q log q) --> traverse calls records and sort the distinct codes (q)
+# Space: O(m) --> storing codes from calls records
+
+Part B:
+# Time: O(m) --> traverse calls records
+# Space: O(1) --> only constant space is used
+
+
+
+Task4:
+# Time: O(n+m + q log q) --> traverse texts and calls records and sort distinct numbers q
+# Space: O(n+m) --> store numbers in texts and calls records
