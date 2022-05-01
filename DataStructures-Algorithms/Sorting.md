@@ -2,7 +2,7 @@
 
 ## Linear search
 * Algorithm
-  * Input: nums array
+  * Input: nums array, target
   * For each item at position i:
     * If nums[i] == target:
       * return i
@@ -24,7 +24,39 @@
 
 
 ## Binary search
-
+* Algorithm
+  * Input: nums array, target
+  * Initialize left and right pointers
+  * While left <= right:
+    * Compute mid pointer
+    * If mid item == target:
+      * return mid
+    * Else if target > mid item:
+      * left = mid + 1
+    * Else
+      * right = mid - 1
+  * Output: target index
+  ```
+  def binary_search(nums):
+    '''
+    T: O(log n) and S: O(1)
+    '''
+    left = 0
+    right = len(nums) - 1
+    while left <= right:
+        mid = (left + right) / 2
+        if nums[mid] == target:
+           return mid
+        else if target > nums[mid]:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
+  ```
+* Complexity analysis
+  * Time complexity: min number of search is 1 and max number of search is n. Therefore, average number of search is n/2.
+    * T(n) = O(n/2) = O(n)
+  * Space complexity: in-place. O(1)
 
 # Sorting Algorithms
 
