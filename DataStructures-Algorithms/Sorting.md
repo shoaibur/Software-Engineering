@@ -20,7 +20,7 @@
 * Complexity analysis
   * Time complexity: min number of search is 1 and max number of search is n. Therefore, average number of search is n/2.
     * T(n) = O(n/2) = O(n)
-  * Space complexity: in-place. O(1)
+  * Space complexity: No additional space required, O(1)
 
 
 ## Binary search
@@ -54,9 +54,10 @@
     return -1
   ```
 * Complexity analysis
-  * Time complexity: min number of search is 1 and max number of search is n. Therefore, average number of search is n/2.
-    * T(n) = O(n/2) = O(n)
-  * Space complexity: in-place. O(1)
+  * Time complexity: At each iteration, the search array length becomes half. So, for at most `x` required searches, we say
+    * 2^x = n or, x = log2 n, therefore
+    * T(n) = O(log2 n) = O(log n)
+  * Space complexity: No additional space required, O(1)
 
 # Sorting Algorithms
 
