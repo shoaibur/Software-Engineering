@@ -1,6 +1,27 @@
 # Searching Algorithms
 
 ## Linear search
+* Algorithm
+  * Input: nums array
+  * For each item at position i:
+    * If nums[i] == target:
+      * return i
+  * Output: target index
+  ```
+  def linear_search(nums):
+    '''
+    T: O(n) and S: O(1)
+    '''
+    for i in range(len(nums)):
+        if nums[i] == target:
+            return i
+    return -1
+  ```
+* Complexity analysis
+  * Time complexity: min number of search is 1 and max number of search is n. Therefore, average number of search is n/2.
+    * T(n) = O(n/2) = O(n)
+  * Space complexity: in-place. O(1)
+
 
 ## Binary search
 
