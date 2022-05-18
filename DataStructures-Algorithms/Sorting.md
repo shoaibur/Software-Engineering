@@ -24,6 +24,7 @@
 
 
 ## Binary search
+Binary search is an efficient algorithm for finding an item from an ordered list of items. It works by repeatedly dividing in half the portion of the list, until narrowing down the possible locations to just one. The time complexity reduces from O(n) to O(logn).
 * Algorithm
   * Input: nums array, target
   * Initialize left and right pointers
@@ -62,6 +63,7 @@
 # Sorting Algorithms
 
 ## Insertion sort
+It repeatedly take an element from the input data and inserts it into the position so that its value is between the previous and the next element.
 * Algorithm
   * Input: nums array
   * For each item at position i:
@@ -90,6 +92,7 @@
 
 
 ## Bubble sort
+It compares adjacent elements and swaps them if they are in the wrong order.
 * Algorithm
   * Input: nums array
   * For each item:
@@ -119,6 +122,7 @@
 
 
 ## Selection sort
+It repeatedly finds the minimum element from unsorted part and puts it at the beginning.
 * Algorithm
   ```
   def selectionSort(nums):
