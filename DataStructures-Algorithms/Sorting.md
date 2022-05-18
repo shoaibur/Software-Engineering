@@ -146,6 +146,7 @@ It repeatedly finds the minimum element from unsorted part and puts it at the be
 
 
 ## Merge Sort
+It divides the array in half, sorts each of those halves, and then merges them together.
 * Algorithm
   * Input: nums array
   * func mergeSort(nums):
@@ -203,6 +204,7 @@ It repeatedly finds the minimum element from unsorted part and puts it at the be
 
 
 ## Quick sort
+It partitions the array into two subarrays based on the pivot, move the larger ones to the right, and smaller ones to the left.  
 * Algorithm
   ```
   def quickSort(nums):
