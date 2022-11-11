@@ -50,8 +50,83 @@
   * Traversal
     * DFS
       * Preorder
+      ```
+      def preorderTraversal(root):
+          # Iterative
+          res, stack = [], []
+          while root or stack:
+              if root:
+                  stack.append(root)
+                  res.append(root.val)
+                  root = root.left
+              else:
+                  node = stack.pop()
+                  root = node.right
+          return res
+
+
+          # Recursive
+          res = []
+          def preorder(root):
+              if root:
+                  res.append(root.val)
+                  preorder(root.left)
+                  preorder(root.right)
+
+          preorder(root)
+          return res
+      ```
       * Inorder
+      ```
+      def inorderTraversal(root):
+          # Iterative
+          res, stack = [], []
+          while root or stack:
+              if root:
+                  stack.append(root)
+                  root = root.left
+              else:
+                  node = stack.pop()
+                  res.append(node.val)
+                  root = node.right
+          return res
+
+          # Recursive
+          res = []
+          def inorder(root):
+              if root:
+                  inorder(root.left)
+                  res.append(root.val)
+                  inorder(root.right)
+          inorder(root)
+          return res
+      ```
       * Postorder
+      ```
+      def postorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+          # Iterative
+          res, stack = [], []
+          while root or stack:
+              if root:
+                  stack.append(root)
+                  res.append(root.val)
+                  root = root.right
+              else:
+                  node = stack.pop()
+                  root = node.left
+          return res[::-1]
+
+          # Recursive
+          res = []
+          def postorder(root):
+              if root:
+                  postorder(root.left)
+                  postorder(root.right)
+                  res.append(root.val)
+
+          postorder(root)
+          return res
+      ```
     * BFS
 
 ### Leetcode exeercises on trees
