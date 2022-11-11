@@ -128,6 +128,29 @@
           return res
       ```
     * BFS
+    ```
+    def levelOrder(root):
+        if not root:
+            return []
+        res = []
+        q = deque()
+        q.append(root)
+        
+        while q:
+            levelSize = len(q)
+            nodeCount = 0
+            temp = []
+            while nodeCount < levelSize:
+                node = q.popleft()
+                temp.append(node.val)
+                if node.left:
+                    q.append(node.left)
+                if node.right:
+                    q.append(node.right)
+                nodeCount += 1
+            res.append(temp)
+        return res
+    ```
 
 ### Leetcode exeercises on trees
 * 297: Serialize and deserialize binary tree
