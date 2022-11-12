@@ -13,25 +13,26 @@
 	    return adj
 	```
 ### Graph traversal
+* The only difference between DFS and BFS is the use of stack (DFS) and queue (BFS), i.e., popping node from right/stack/DFS and from left/queue/BFS.
 * BFS
 	```
-	def bfs(graph, startNode):
-	    q = collections.deque()
-	    q.append(startNode)
+	def bfs(graph, start):
+            res = []
+            q = deque()
+            q.append(start)
 
-	    visited = set()
-	    visited.add(startNode)
+            visited = set()
 
-	    nodes = []
+            while q:
+                curr = q.popleft()
+                res.append(curr)
+                visited.add(start)
 
-	    while q:
-		currNode = q.popleft()
-		nodes.append(currNode)
-		for neighbor in graph[currNode]:
-		    if neighbor not in visited:
-			visited.add(neighbor)
-			q.append(neighbor)
-	    return nodes
+                for neighbor in graph[curr]:
+                    if neighbor not in visited:
+                        q.append(neighbor)
+                        visited.add(neighbor)
+            return res
 
 	adj = buildGraph(edges)
 	print(bfs(adj, 0))
@@ -39,23 +40,23 @@
 
 * DFS
 	```
-	def dfs(graph, startNode):
-	    stack = []
-	    stack.append(startNode)
-	    
-	    nodes = []
-	    visited = set()
-	    
-	    while stack:
-		currNode = stack.pop()
-		visited.add(currNode)
-		nodes.append(currNode)
-		
-		for neighbor in graph[currNode]:
-		    if neighbor not in visited:
-			visited.add(neighbor)
-			stack.append(neighbor)
-	    return nodes
+	def dfs(graph, start):
+            res = []
+            stack = deque()
+            stack.append(start)
+
+            visited = set()
+
+            while stack:
+                curr = stack.pop()
+                res.append(curr)
+                visited.add(curr)
+
+                for neighbor in graph[curr]:
+                    if neighbor not in visited:
+                        visited.add(neighbor)
+                        stack.append(neighbor)
+            return res
 
 	adj = buildGraph(edges)
 	print(dfs(adj, 0))
