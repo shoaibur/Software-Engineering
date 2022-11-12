@@ -152,8 +152,24 @@
               res.append(temp)
           return res
       ```
+      
+### Basic preparation
+* Binary tree preorder traversal
+* Binary tree inorder traversal
+* Binary tree postorder traversal
+* Binary tree level order traversal
+* Maximum depth of binary tree
+* Symmetric tree
+* Path sum
+* Count univalue subtrees
+* Construct binary tree from inorder and postorder traversal
+* Construct binary tree from preorder and inorder traversal
+* Populating next right pointers in each node
+* Populating next right pointers in each node II
+* Lowest common ancestor of a binary tree
+* Serialize and deserialize binary tree
 
-### Leetcode exeercises on trees
+### Advanced preparation
 * 297: Serialize and deserialize binary tree
 * 199: Binary tree right side view
 * 124: Binary tree maximum path sum
