@@ -158,16 +158,25 @@
 * Binary tree inorder traversal
 * Binary tree postorder traversal
 * Binary tree level order traversal
+* Invert binary tree
 * Maximum depth of binary tree
+* Diameter of binary tree
+* Balanced binary tree
+* Same tree
+* Subtree of another tree
 * Symmetric tree
-* Path sum
-* Count univalue subtrees
+* Lowest common ancestor of a binary tree
+* Binary three right side view
+* Count good nodes in binary three
+* Validate binary search tree
+* Kth smallest element in a BST
 * Construct binary tree from inorder and postorder traversal
 * Construct binary tree from preorder and inorder traversal
+* Path sum
+* Binary tree maximum path sum
+* Serialize and deserialize binary tree
 * Populating next right pointers in each node
 * Populating next right pointers in each node II
-* Lowest common ancestor of a binary tree
-* Serialize and deserialize binary tree
 
 ### Advanced preparation
 * 297: Serialize and deserialize binary tree
@@ -223,3 +232,5 @@
 * 701: Insert into a binary search tree
 * 1022: Sum of root to leaf binary numbers
 * 1602: Find nearest right node in binary tree
+* Count univalue subtrees
+
