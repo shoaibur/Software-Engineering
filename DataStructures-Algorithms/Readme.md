@@ -1,20 +1,21 @@
 # Data Structures and Algorithms
 
+* Arrays, Strings and Hashing
+* Two pointers
+* Sliding Window
 * Stacks and Queues
-* Arrays and Strings
 * Linked Lists
-* Hash Maps
-* Heaps / Priority Queues
+* Searching and Sorting
+* Binary Search
 * Trees
-* Trie
+* Tries
 * Graphs
-  * Representation, BFS, DFS
-  * Minimum Spanning Tree - Prim's algorithm, Krushkals algorithm
-  * Shortest Path Algorithm - Dijkstra algorithm
-  * Topological Sorting (using DFS)
-* Design (Basic classes)
-
-* Recursion
-* Searching (Linear, Binary)
-* Sorting (Bubble, insersion, quick, merge, radix, heap)
-* Dynamic Programming
+* Advanced Graphs
+* Heaps / Priority Queues
+* Backtracking
+* 1d Dynamic Programming
+* 2d Dynamic Programming
+* Greedy
+* Intervals
+* Math and Geometry
+* Bit Manipulation
