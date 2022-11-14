@@ -198,3 +198,48 @@ selected	2	3	4	5	6
             return []
         return order
     ```
+### Basic problems
+* Learn DFS
+  * Find if path exists in graph
+  * All paths from source to target
+  * Clone graph
+  * Reconstruct itinerary
+  * All paths from source lead to destination
+* Learn BFS
+  * Find if path exists in graph
+  * All paths from source to target
+  * Shortest path in binary matrix
+  * N-ary tree level order traversal
+  * Rotting oranges
+* Basic
+  * Number of islands
+  * Clone graph
+  * Max area of island
+  * Pacific Atlantic water flow
+  * Surrounded regions
+  * Rotting oranges
+  * Walls and gates
+  * Course schedule
+  * Course schedule II
+  * Redundant connection
+  * Number of connected components in an undirected graph
+  * Graph valid tree
+  * Word ladder
+* Advanced
+  * Island perimeter
+  * Verifying an alien dictionary
+  * Count sub-islands
+  * Reorder routes to make all paths lead to the city zero
+  * Snakes and ladders
+  * Open the lock
+  * Find eventual safe states
+  * Check if move is legal
+  * Shortest bridge
+  * Minimum number of days to eat n oranges
+* Advanced Graphs
+  * Reconstruct itinerary
+  * Min cost to connect all points
+  * Network delay time
+  * Swim in rising water
+  * Alien dictionary
+  * Cheapest flights within k stops
