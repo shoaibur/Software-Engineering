@@ -147,6 +147,23 @@
 
 # 6. Git Remote
 
+## Set up SSH key
+* Check for Existing SSH Keys: 
+`ls -al ~/.ssh`
+
+* Generate a New SSH Key: If no keys exist, generate one: 
+`ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`.
+If you do so, your private key will be saved as `/Users/user_name/.ssh/id_rsa` and your public key as `/Users/user_name/.ssh/id_rsa.pub`.
+
+* Add the SSH Key to SSH-Agent:
+`eval "$(ssh-agent -s)"`
+Then, add your SSH key to the ssh-agent:
+`ssh-add ~/.ssh/id_rsa`
+
+* Add the SSH Key to GitHub:
+First, copy the generated key: `pbcopy < ~/.ssh/id_rsa.pub`
+Then, login to GitHub.com. In the user settings sidebar, click on SSH and GPG keys. Click the "New SSH key" button. Paste your public key into the "Key" field and provide a title. Click "Add SSH key".
+
 ## 6a. Cloning a repo
 * `git clone <url>`
   * `git clone https://github.com/shoaibur/SWE.git`
